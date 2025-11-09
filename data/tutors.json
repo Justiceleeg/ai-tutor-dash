@@ -11,7 +11,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 95
+    "profileCompletionRate": 95,
+    "riskScoreGeneratedAt": "2025-11-09T23:05:05.940Z",
+    "riskScore": "high",
+    "riskReasoning": "Despite having a high profile completion rate of 95%, the tutor has not conducted any sessions, resulting in an average rating of 0.00 and a first session success rate of 0.0%. This indicates a lack of engagement and performance, which could lead to a high risk of churn or negative impact on students if not addressed, especially considering the importance of first session experiences."
   },
   {
     "id": "tutor-002",
@@ -25,7 +28,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 2,
-    "profileCompletionRate": 34
+    "profileCompletionRate": 34,
+    "riskScoreGeneratedAt": "2025-11-09T23:05:09.624Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a lack of positive engagement with students, although it's noted that they have not yet conducted any sessions. The presence of two support tickets despite having no sessions suggests potential issues with readiness or professionalism. Additionally, a profile completion of only 34% further indicates a lack of commitment or preparation for tutoring responsibilities."
   },
   {
     "id": "tutor-003",
@@ -39,7 +45,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 91
+    "profileCompletionRate": 91,
+    "riskScoreGeneratedAt": "2025-11-09T23:05:14.362Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating no positive engagement or successful sessions with students. Despite having no sessions conducted (total sessions: 0), which explains the lack of data in some metrics, the complete absence of any tutoring activity combined with a high profile completion suggests a disinterest or inability to start tutoring, posing a high risk for potential student impact and tutor churn."
   },
   {
     "id": "tutor-004",
@@ -53,7 +62,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 1,
-    "profileCompletionRate": 49
+    "profileCompletionRate": 49,
+    "riskScoreGeneratedAt": "2025-11-09T23:05:18.124Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a lack of positive engagement with students, though this might be due to having no recorded sessions yet. The profile completion rate is below 50%, suggesting a lack of commitment or engagement with the tutoring platform. Additionally, there is a recent support ticket about this tutor, which could indicate underlying issues not directly visible through other metrics."
   },
   {
     "id": "tutor-005",
@@ -67,7 +79,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 63
+    "profileCompletionRate": 63,
+    "riskScoreGeneratedAt": "2025-11-09T23:05:22.677Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a lack of positive engagement with students, although it's noted that they have not yet conducted any sessions. The profile completion rate of 63% is below optimal, suggesting a lack of full commitment or preparation for tutoring responsibilities. These factors combined with no active students or session history suggest a high risk of either not starting or not succeeding in their role."
   },
   {
     "id": "tutor-006",
@@ -81,7 +96,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 95
+    "profileCompletionRate": 95,
+    "riskScoreGeneratedAt": "2025-11-09T23:05:26.861Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00/5.0 and a first session success rate of 0.0%, indicating a complete lack of positive engagement or successful tutoring sessions. Despite having no reschedules or no-shows, the total absence of sessions (Total Sessions: 0) and current students (Current Student Count: 0) suggests either a new or inactive tutor status, which poses a high risk for potential churn or inability to contribute positively to student experiences."
   },
   {
     "id": "tutor-007",
@@ -95,7 +113,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 75
+    "profileCompletionRate": 75,
+    "riskScoreGeneratedAt": "2025-11-09T23:05:31.267Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00/5.0 and a first session success rate of 0.0%, indicating a complete lack of successful engagement with students, which is critical given the importance of first session experiences. Additionally, the tutor has not completed their profile fully (75% completion), which might affect student trust and engagement. Despite having no sessions conducted (total sessions: 0), these metrics suggest a lack of readiness or engagement in the tutoring process, posing a high risk of negative impact on students if not addressed."
   },
   {
     "id": "tutor-008",
@@ -109,7 +130,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 67
+    "profileCompletionRate": 67,
+    "riskScoreGeneratedAt": "2025-11-09T23:05:35.226Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a lack of positive engagement with students, which is critical for retention and satisfaction. Despite having no sessions conducted (total sessions: 0), the absence of any active students and the incomplete profile (67% completion) suggest a lack of commitment or readiness to effectively engage with the tutoring platform and its students. These factors combined present a high risk for potential churn and negative impact on student experience."
   },
   {
     "id": "tutor-009",
@@ -123,7 +147,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 1,
-    "profileCompletionRate": 79
+    "profileCompletionRate": 79,
+    "riskScoreGeneratedAt": "2025-11-09T23:05:39.014Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating that they have not successfully engaged or satisfied any students in their sessions. Despite having no total sessions, which could initially suggest a new or inactive status, the presence of a support ticket raises concerns about potential issues or complaints related to the tutor. This combination of factors, especially with a significant profile completion but no active students or sessions, suggests a high risk of negative impact on students or potential churn."
   },
   {
     "id": "tutor-010",
@@ -137,7 +164,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 84
+    "profileCompletionRate": 84,
+    "riskScoreGeneratedAt": "2025-11-09T23:05:43.172Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00/5.0 and a first session success rate of 0.0%, indicating a critical failure in engaging students effectively during initial sessions. Despite having no sessions conducted (total sessions = 0), these metrics suggest a lack of readiness or capability to start tutoring, which is essential for preventing tutor churn and ensuring student satisfaction. The profile completion rate of 84% shows some engagement, but without any active students or session history, the risk of negative impact or churn is high."
   },
   {
     "id": "tutor-011",
@@ -151,7 +181,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 64
+    "profileCompletionRate": 64,
+    "riskScoreGeneratedAt": "2025-11-09T23:05:46.853Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a complete lack of positive engagement or feedback from students. Despite having no sessions conducted (total sessions: 0), this lack of engagement and activity suggests a high risk of ineffectiveness or disinterest in fulfilling tutoring responsibilities. The profile completion rate of 64% further supports the concern of low engagement and readiness to tutor effectively."
   },
   {
     "id": "tutor-012",
@@ -165,7 +198,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 83
+    "profileCompletionRate": 83,
+    "riskScoreGeneratedAt": "2025-11-09T23:05:51.612Z",
+    "riskScore": "high",
+    "riskReasoning": "Despite having no negative metrics such as no-shows or reschedules, the tutor's performance is concerning due to a complete lack of activity, indicated by an average rating of 0.00, a first session success rate of 0%, and a total of zero sessions conducted. This suggests either a new tutor who has not yet started or one who is inactive, both scenarios leading to potential churn and no value to students."
   },
   {
     "id": "tutor-013",
@@ -179,7 +215,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 37
+    "profileCompletionRate": 37,
+    "riskScoreGeneratedAt": "2025-11-09T23:05:57.758Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a lack of positive engagement with students, although it's noted that they have had zero total sessions. The profile completion rate is only 37%, suggesting a lack of commitment or follow-through in establishing their tutoring profile. These factors, combined with no active students or sessions, point to a high risk of churn or inability to attract and retain students."
   },
   {
     "id": "tutor-014",
@@ -193,7 +232,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 1,
-    "profileCompletionRate": 90
+    "profileCompletionRate": 90,
+    "riskScoreGeneratedAt": "2025-11-09T23:06:02.266Z",
+    "riskScore": "high",
+    "riskReasoning": "Despite having no negative metrics such as no-shows or reschedules, the tutor has an average rating of 0.00 and a first session success rate of 0%, indicating no successful engagement with students. The total sessions count is 0, suggesting no actual tutoring has occurred, and there is one recent support ticket, which could indicate issues needing resolution. The lack of active students and the absence of any positive performance metrics suggest a high risk of churn or negative impact on students if sessions were to occur."
   },
   {
     "id": "tutor-015",
@@ -207,7 +249,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 1,
-    "profileCompletionRate": 80
+    "profileCompletionRate": 80,
+    "riskScoreGeneratedAt": "2025-11-09T23:06:08.576Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a complete lack of positive feedback or successful engagement with students. Despite having no sessions conducted (total sessions = 0), which could explain the lack of ratings and success rate, there is already a support ticket filed against this tutor, suggesting potential issues or concerns that need addressing. The combination of these factors points to a high risk of either not starting effectively or negatively impacting students if sessions were to occur."
   },
   {
     "id": "tutor-016",
@@ -221,7 +266,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 94
+    "profileCompletionRate": 94,
+    "riskScoreGeneratedAt": "2025-11-09T23:06:13.914Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a complete lack of positive engagement or successful tutoring sessions. Despite having no sessions conducted (total sessions: 0), these metrics suggest a potential misunderstanding or misrepresentation in the system, or a lack of readiness or suitability for tutoring. The absence of any active students and no recorded sessions further supports the concern that this tutor may not be effectively engaging with the tutoring platform or students."
   },
   {
     "id": "tutor-017",
@@ -235,7 +283,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 83
+    "profileCompletionRate": 83,
+    "riskScoreGeneratedAt": "2025-11-09T23:06:18.534Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00/5.0 and a first session success rate of 0.0%, indicating a complete lack of positive engagement or success with students. Despite having no sessions conducted (total sessions: 0), these metrics suggest either incorrect data entry or a lack of opportunity to demonstrate tutoring effectiveness. The absence of any active students and the partially incomplete profile (83% completion) further underscore a lack of engagement or readiness to tutor effectively."
   },
   {
     "id": "tutor-018",
@@ -249,7 +300,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 52
+    "profileCompletionRate": 52,
+    "riskScoreGeneratedAt": "2025-11-09T23:06:22.638Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating that they have not yet successfully engaged with any students or received any positive feedback. Despite having no sessions conducted, the lack of active engagement (total sessions, current student count, and reschedule rate all at 0) combined with only a 52% profile completion suggests a lack of commitment or readiness to tutor effectively. These factors together point to a high risk of either not starting or not performing well in future tutoring sessions."
   },
   {
     "id": "tutor-019",
@@ -263,7 +317,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 30
+    "profileCompletionRate": 30,
+    "riskScoreGeneratedAt": "2025-11-09T23:06:27.977Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a lack of positive engagement with students, although it's noted that they have not yet conducted any sessions. The profile completion rate is only 30%, suggesting a low level of commitment or readiness to engage students effectively. These factors combined with no active students and no sessions conducted point to a high risk of either not starting or not succeeding in the tutoring role."
   },
   {
     "id": "tutor-020",
@@ -277,7 +334,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 84
+    "profileCompletionRate": 84,
+    "riskScoreGeneratedAt": "2025-11-09T23:06:33.092Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00/5.0 and a first session success rate of 0.0%, indicating a complete lack of positive engagement or success with students. Additionally, the total sessions count of 0 suggests that the tutor has not yet started tutoring or has not been able to retain any students, which is concerning given the importance of first session experiences. The profile completion rate of 84% is relatively high, yet it does not compensate for the absence of actual tutoring performance metrics."
   },
   {
     "id": "tutor-021",
@@ -291,7 +351,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 3,
-    "profileCompletionRate": 69
+    "profileCompletionRate": 69,
+    "riskScoreGeneratedAt": "2025-11-09T23:06:38.277Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0%, indicating a lack of positive engagement with students, although it's noted they have not yet conducted any sessions. The presence of three recent support tickets suggests significant concerns or issues from either students or the platform, despite no sessions being held. The incomplete profile at 69% also reflects a lack of full commitment or readiness to engage students effectively."
   },
   {
     "id": "tutor-022",
@@ -305,7 +368,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 76
+    "profileCompletionRate": 76,
+    "riskScoreGeneratedAt": "2025-11-09T23:06:42.827Z",
+    "riskScore": "high",
+    "riskReasoning": "Despite having no negative indicators such as no-shows or reschedules, the tutor's average rating of 0.00 and a first session success rate of 0.0% are extremely concerning, particularly given the importance of first session experiences. The total absence of sessions (total sessions: 0) and current students (current student count: 0) suggests the tutor is either new or inactive, which does not align with the need for reliable and ongoing engagement in the tutoring platform."
   },
   {
     "id": "tutor-023",
@@ -319,7 +385,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 46
+    "profileCompletionRate": 46,
+    "riskScoreGeneratedAt": "2025-11-09T23:06:46.392Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating no positive feedback or successful engagement with students. Despite having no sessions conducted (total sessions: 0), the profile completion rate is only 46%, suggesting a lack of commitment or readiness to start tutoring effectively. These metrics show a lack of engagement and preparation, which are critical red flags for potential negative impact on students and high churn risk."
   },
   {
     "id": "tutor-024",
@@ -333,7 +402,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 79
+    "profileCompletionRate": 79,
+    "riskScoreGeneratedAt": "2025-11-09T23:06:51.515Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a lack of positive engagement or outcomes with students, which is critical given the importance of first sessions. Additionally, the tutor has not conducted any sessions yet, which raises concerns about their commitment or ability to start tutoring effectively. Despite no issues with no-shows or reschedules, the absence of any active students or sessions suggests a high risk of churn or negative impact on student experience if this pattern continues."
   },
   {
     "id": "tutor-025",
@@ -347,7 +419,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 36
+    "profileCompletionRate": 36,
+    "riskScoreGeneratedAt": "2025-11-09T23:06:56.743Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a complete lack of positive engagement or feedback from any sessions, which is critical given the importance of first session experiences. Additionally, the profile completion rate is only 36%, suggesting a lack of commitment or engagement with the tutoring platform. Despite having no sessions, no-shows, or reschedules, the absence of any active students and the extremely low profile completion significantly contribute to the high-risk classification."
   },
   {
     "id": "tutor-026",
@@ -361,7 +436,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 84
+    "profileCompletionRate": 84,
+    "riskScoreGeneratedAt": "2025-11-09T23:07:00.333Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, which are critical metrics indicating poor performance or lack of engagement. Despite having no sessions conducted (total sessions: 0), these metrics suggest a lack of readiness or capability to engage students effectively. The absence of active students and no recorded sessions further supports the classification of a high risk level, indicating potential for churn and negative impact on student experience if not addressed."
   },
   {
     "id": "tutor-027",
@@ -375,7 +453,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 1,
-    "profileCompletionRate": 82
+    "profileCompletionRate": 82,
+    "riskScoreGeneratedAt": "2025-11-09T23:07:07.192Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a complete lack of successful engagement with students, though this is influenced by having conducted zero total sessions. The presence of a support ticket despite no sessions suggests potential issues in readiness or profile issues that could impact future student interactions. The combination of these factors, especially with no active students and a significant profile completion rate, suggests a high risk of negative impact on students or potential churn."
   },
   {
     "id": "tutor-028",
@@ -389,7 +470,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 56
+    "profileCompletionRate": 56,
+    "riskScoreGeneratedAt": "2025-11-09T23:07:11.972Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a complete lack of positive engagement or feedback from students, which is critical given the importance of first sessions. Despite having no sessions conducted (total sessions are 0), the profile completion rate is only 56%, suggesting a lack of commitment or readiness to engage students effectively. These factors combined point to a high risk of churn and negative impact on student experience if not addressed."
   },
   {
     "id": "tutor-029",
@@ -403,7 +487,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 45
+    "profileCompletionRate": 45,
+    "riskScoreGeneratedAt": "2025-11-09T23:07:15.987Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a complete lack of positive engagement or feedback from students. Despite having no sessions conducted (total sessions: 0), the profile completion rate is only 45%, suggesting a lack of commitment or readiness to engage students effectively. These metrics collectively point to a high risk of negative impact on student experiences and potential churn."
   },
   {
     "id": "tutor-030",
@@ -417,7 +504,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 54
+    "profileCompletionRate": 54,
+    "riskScoreGeneratedAt": "2025-11-09T23:07:19.424Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a complete lack of positive engagement or feedback from students, which is critical for retention and success. Additionally, the tutor has not completed their profile fully (54% completion), which can affect their visibility and attractiveness to potential students. Despite having no sessions conducted, these metrics suggest a lack of readiness or engagement that could lead to high risk if not addressed."
   },
   {
     "id": "tutor-031",
@@ -431,7 +521,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 50
+    "profileCompletionRate": 50,
+    "riskScoreGeneratedAt": "2025-11-09T23:07:24.312Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a lack of positive engagement with students. Despite having no sessions conducted, the profile completion rate of only 50% suggests a lack of commitment or readiness to start tutoring effectively. These factors combined point towards a high risk of negative impact on students and potential churn."
   },
   {
     "id": "tutor-032",
@@ -445,7 +538,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 82
+    "profileCompletionRate": 82,
+    "riskScoreGeneratedAt": "2025-11-09T23:07:28.381Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating either a lack of engagement or poor performance in initial interactions, although it's noted that they have not yet conducted any sessions. The absence of any sessions, reschedules, or no-shows, combined with zero current students, suggests a complete lack of activity or engagement, which poses a high risk for future performance and reliability concerns."
   },
   {
     "id": "tutor-033",
@@ -459,7 +555,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 27
+    "profileCompletionRate": 27,
+    "riskScoreGeneratedAt": "2025-11-09T23:07:33.030Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a lack of positive engagement or success with any students. Additionally, the tutor has not completed their profile (only 27% complete), which is essential for attracting and retaining students. Despite having no sessions conducted (total sessions: 0), these metrics suggest a lack of readiness or commitment to start tutoring effectively."
   },
   {
     "id": "tutor-034",
@@ -473,7 +572,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 90
+    "profileCompletionRate": 90,
+    "riskScoreGeneratedAt": "2025-11-09T23:07:38.066Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating that they have not successfully engaged or satisfied any students, despite the critical importance of first sessions. Additionally, the total absence of sessions (Total Sessions: 0) and current students (Current Student Count: 0) suggests either a lack of opportunity to teach or a lack of engagement from the tutor's side. This combination of factors points to a high risk of churn or negative impact on students if not addressed."
   },
   {
     "id": "tutor-035",
@@ -487,7 +589,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 2,
-    "profileCompletionRate": 76
+    "profileCompletionRate": 76,
+    "riskScoreGeneratedAt": "2025-11-09T23:07:42.307Z",
+    "riskScore": "high",
+    "riskReasoning": "Despite having no sessions conducted, which explains the zero ratings and success rates, the tutor has already accumulated two support tickets, which is concerning given the lack of student interaction. The profile completion rate of 76% is below optimal, indicating a potential lack of engagement or commitment. These factors combined suggest a high risk of either churn or negative impact on future students."
   },
   {
     "id": "tutor-036",
@@ -501,7 +606,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 1,
-    "profileCompletionRate": 78
+    "profileCompletionRate": 78,
+    "riskScoreGeneratedAt": "2025-11-09T23:07:48.040Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a lack of positive engagement with students, although it's noted that they have not yet conducted any sessions. The presence of a support ticket within 48 hours, despite having no sessions or active students, suggests potential issues with readiness or professionalism. The combination of these factors, along with a profile completion rate of only 78%, points to a high risk of negative impact on students and potential churn."
   },
   {
     "id": "tutor-037",
@@ -515,7 +623,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 88
+    "profileCompletionRate": 88,
+    "riskScoreGeneratedAt": "2025-11-09T23:07:52.003Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating they have not yet conducted any sessions or received any ratings, which is concerning given the importance of first session experiences. Additionally, the tutor has no current students and has not rescheduled or missed any sessions, suggesting a lack of engagement or activity in their tutoring role. This combination of inactivity and lack of student interaction places the tutor at a high risk of churning or failing to meet student needs effectively."
   },
   {
     "id": "tutor-038",
@@ -529,7 +640,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 70
+    "profileCompletionRate": 70,
+    "riskScoreGeneratedAt": "2025-11-09T23:07:56.743Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating either a lack of engagement or poor performance in initial interactions with students. Despite having no reschedules or no-shows, the total absence of sessions (Total Sessions: 0) and current students (Current Student Count: 0) suggests a complete lack of activity or engagement, which is highly concerning for potential future performance and reliability."
   },
   {
     "id": "tutor-039",
@@ -543,7 +657,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 1,
-    "profileCompletionRate": 92
+    "profileCompletionRate": 92,
+    "riskScoreGeneratedAt": "2025-11-09T23:08:01.954Z",
+    "riskScore": "high",
+    "riskReasoning": "Despite having no sessions conducted (total sessions = 0), the tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating potential issues with profile or initial interactions. The presence of a support ticket about the tutor, despite no active students or sessions, suggests concerns or complaints that need addressing. The high profile completion rate (92%) does not mitigate the risk due to the absence of actual tutoring performance data and existing negative indicators."
   },
   {
     "id": "tutor-040",
@@ -557,7 +674,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 60
+    "profileCompletionRate": 60,
+    "riskScoreGeneratedAt": "2025-11-09T23:08:06.167Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a lack of successful engagement with students, which is critical given the importance of first sessions. Additionally, the tutor has not completed their profile fully (60% completion), which could affect student trust and engagement. Despite having no sessions conducted, these metrics suggest a lack of readiness or engagement that could lead to future negative impacts on students if not addressed."
   },
   {
     "id": "tutor-041",
@@ -571,7 +691,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 2,
-    "profileCompletionRate": 73
+    "profileCompletionRate": 73,
+    "riskScoreGeneratedAt": "2025-11-09T23:08:10.772Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0%, indicating a lack of positive engagement with students, though it's noted they have not yet held any sessions. The presence of two recent support tickets, despite no recorded sessions, suggests potential issues or misunderstandings in preparation or communication. The tutor's profile completion rate of 73% is below optimal, which could affect student attraction and trust."
   },
   {
     "id": "tutor-042",
@@ -585,7 +708,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 88
+    "profileCompletionRate": 88,
+    "riskScoreGeneratedAt": "2025-11-09T23:08:13.874Z",
+    "riskScore": "low",
+    "riskReasoning": "The tutor has not conducted any sessions yet, as indicated by a total session count of 0, which explains the absence of ratings, reschedules, and no-shows. The profile completion rate is relatively high at 88%, suggesting readiness and commitment to start tutoring. Given the lack of negative indicators and the high profile completion, the risk level is classified as low."
   },
   {
     "id": "tutor-043",
@@ -599,7 +725,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 95
+    "profileCompletionRate": 95,
+    "riskScoreGeneratedAt": "2025-11-09T23:08:19.515Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a complete lack of positive engagement or feedback from students. Despite having no reschedules, no-shows, or support tickets, the total absence of sessions (total sessions = 0) and current students (current student count = 0) suggests a lack of activity and engagement, which is critical for maintaining a successful tutoring profile. This pattern of non-participation poses a high risk for future churn or negative impact on students."
   },
   {
     "id": "tutor-044",
@@ -613,7 +742,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 78
+    "profileCompletionRate": 78,
+    "riskScoreGeneratedAt": "2025-11-09T23:08:24.816Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating they have not successfully engaged or satisfied any students, which is critical given the importance of first sessions. Despite having no reschedules or no-shows, the total absence of any sessions (total sessions: 0) and current students (current student count: 0) suggests a lack of engagement or activity, which is a significant concern for potential future performance and reliability."
   },
   {
     "id": "tutor-045",
@@ -627,7 +759,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 89
+    "profileCompletionRate": 89,
+    "riskScoreGeneratedAt": "2025-11-09T23:08:30.017Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0%, which are critical metrics given the importance of first session experiences. Despite having no sessions conducted (total sessions: 0), these initial metrics suggest a lack of engagement or effectiveness in attracting and retaining students. The lack of active students and total sessions indicates a potential risk for future student impact and tutor churn."
   },
   {
     "id": "tutor-046",
@@ -641,7 +776,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 35
+    "profileCompletionRate": 35,
+    "riskScoreGeneratedAt": "2025-11-09T23:08:33.916Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a lack of positive engagement or outcomes with students, although there are no sessions logged. The profile completion rate is only 35%, suggesting a lack of commitment or engagement with the tutoring platform. These factors combined with no active students or sessions indicate a high risk for churn and a negative impact on potential students."
   },
   {
     "id": "tutor-047",
@@ -655,7 +793,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 90
+    "profileCompletionRate": 90,
+    "riskScoreGeneratedAt": "2025-11-09T23:08:40.019Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating no positive engagement or successful tutoring sessions. Despite having no reschedules or no-shows, the total absence of sessions (Total Sessions: 0) and lack of current students (Current Student Count: 0) suggest a complete lack of activity and engagement, which is a critical red flag. This profile points to a tutor who is either not participating in the tutoring process or is ineffective at attracting and retaining students."
   },
   {
     "id": "tutor-048",
@@ -669,7 +810,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 68
+    "profileCompletionRate": 68,
+    "riskScoreGeneratedAt": "2025-11-09T23:08:45.944Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a complete lack of positive engagement or feedback from students. Despite having no sessions conducted (total sessions: 0), the lack of active students and the incomplete profile (68% completion) suggest a lack of readiness or commitment to start tutoring effectively. These factors combined signal a high risk for potential churn and negative impact on students if the tutor were to start without addressing these issues."
   },
   {
     "id": "tutor-049",
@@ -683,7 +827,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 58
+    "profileCompletionRate": 58,
+    "riskScoreGeneratedAt": "2025-11-09T23:08:50.113Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a lack of successful engagement with students, which is critical given the correlation between first session experiences and tutor churn. Despite having no reschedules or no-shows, the total absence of sessions and current students, combined with an incomplete profile (58% completion), suggests a lack of commitment or engagement in the tutoring platform, posing a high risk for potential churn or negative impact on students."
   },
   {
     "id": "tutor-050",
@@ -697,7 +844,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 76
+    "profileCompletionRate": 76,
+    "riskScoreGeneratedAt": "2025-11-09T23:08:54.095Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a lack of positive engagement or success with any students, despite the critical importance of first sessions. Additionally, the tutor has not conducted any sessions yet, as indicated by a total session count of 0, which suggests a lack of involvement or commitment. This complete absence of tutoring activity, combined with a profile completion of only 76%, raises significant concerns about the tutor's reliability and potential to contribute positively to the platform."
   },
   {
     "id": "tutor-051",
@@ -711,7 +861,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 53
+    "profileCompletionRate": 53,
+    "riskScoreGeneratedAt": "2025-11-09T23:08:58.296Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a lack of positive engagement or feedback from students, though this could be due to having no total sessions recorded. The profile completion rate of 53% is also below optimal, suggesting a lack of commitment or engagement with the tutoring platform. These factors combined with no active students or sessions indicate a high risk of churn or inability to positively impact students."
   },
   {
     "id": "tutor-052",
@@ -725,7 +878,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 55
+    "profileCompletionRate": 55,
+    "riskScoreGeneratedAt": "2025-11-09T23:09:02.764Z",
+    "riskScore": "medium",
+    "riskReasoning": "Despite having no negative metrics such as no-shows or reschedules, the tutor's average rating of 0.00 and a first session success rate of 0% are concerning, especially considering the importance of first session experiences. The tutor has not yet held any sessions, indicated by a total session count of 0, which makes it difficult to fully assess their performance but suggests a lack of engagement or opportunity to prove effectiveness. The profile completion rate of 55% also indicates a lack of full commitment to the tutoring platform, which could potentially lead to future engagement issues."
   },
   {
     "id": "tutor-053",
@@ -739,7 +895,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 92
+    "profileCompletionRate": 92,
+    "riskScoreGeneratedAt": "2025-11-09T23:09:07.230Z",
+    "riskScore": "medium",
+    "riskReasoning": "Despite the tutor having a profile completion rate of 92%, they have not yet conducted any sessions, as indicated by their total sessions count of 0 and an average rating of 0.00. This lack of engagement and experience raises concerns about their potential performance and reliability, especially considering the importance of first session success rates in retaining tutors and students. The absence of negative metrics like no-shows or reschedules does not offset the potential risk due to inactivity."
   },
   {
     "id": "tutor-054",
@@ -753,7 +912,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 1,
-    "profileCompletionRate": 55
+    "profileCompletionRate": 55,
+    "riskScoreGeneratedAt": "2025-11-09T23:09:11.019Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0%, indicating a lack of positive engagement with students, though it's noted they have not yet conducted any sessions. The profile completion rate of only 55% suggests a lack of commitment or follow-through in setting up their tutoring profile, which is essential for attracting students. Additionally, the presence of a support ticket raises concerns about potential issues or complaints despite no sessions being held, suggesting possible administrative or communication problems."
   },
   {
     "id": "tutor-055",
@@ -767,7 +929,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 87
+    "profileCompletionRate": 87,
+    "riskScoreGeneratedAt": "2025-11-09T23:09:15.813Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a complete lack of positive engagement or feedback from any sessions, which is critical given the importance of first session experiences. Additionally, the total number of sessions is zero, suggesting either a new tutor without any experience or an inactive one, both of which pose a high risk for future student engagement and retention."
   },
   {
     "id": "tutor-056",
@@ -781,7 +946,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 91
+    "profileCompletionRate": 91,
+    "riskScoreGeneratedAt": "2025-11-09T23:09:19.456Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating no successful engagement with students, which is critical for retention and satisfaction. Despite having no sessions conducted (total sessions: 0), these metrics suggest a lack of engagement or effectiveness in initiating sessions, which could lead to a high risk of churn or negative impact on students if not addressed."
   },
   {
     "id": "tutor-057",
@@ -795,7 +963,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 1,
-    "profileCompletionRate": 89
+    "profileCompletionRate": 89,
+    "riskScoreGeneratedAt": "2025-11-09T23:09:24.018Z",
+    "riskScore": "high",
+    "riskReasoning": "Despite having no sessions conducted, which explains the zero ratings and success rates, the presence of a support ticket raises a significant concern. This indicates potential issues or complaints even before any teaching activity has begun. Coupled with a high profile completion rate, this suggests readiness but potential underlying issues that could impact future performance and student experience negatively."
   },
   {
     "id": "tutor-058",
@@ -809,7 +980,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 89
+    "profileCompletionRate": 89,
+    "riskScoreGeneratedAt": "2025-11-09T23:09:27.384Z",
+    "riskScore": "medium",
+    "riskReasoning": "Despite having no negative metrics such as no-shows or reschedules, the tutor's performance metrics indicate no activity, with an average rating of 0.00 and no sessions conducted. This lack of engagement and experience raises concerns about their potential to successfully manage and retain students, especially considering the importance of first session experiences. The profile completion rate of 89% suggests some readiness, but without active teaching data, it's difficult to predict their effectiveness or reliability."
   },
   {
     "id": "tutor-059",
@@ -823,7 +997,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 52
+    "profileCompletionRate": 52,
+    "riskScoreGeneratedAt": "2025-11-09T23:09:31.256Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a 0.0% success rate for first sessions, which are critical metrics given the correlation between first session experiences and tutor churn. Additionally, the tutor has not completed their profile adequately (only 52% complete), which could affect student engagement and trust. Despite having no sessions conducted (total sessions: 0), the lack of engagement and poor preparation indicate a high risk of either not starting or performing poorly if sessions were to begin."
   },
   {
     "id": "tutor-060",
@@ -837,7 +1014,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 90
+    "profileCompletionRate": 90,
+    "riskScoreGeneratedAt": "2025-11-09T23:09:36.740Z",
+    "riskScore": "low",
+    "riskReasoning": "The tutor has not yet conducted any sessions, indicated by a total session count of 0, which explains the absence of ratings, reschedules, and no-shows. Despite the lack of active students and session data, the tutor has maintained a high profile completion rate of 90%. Given the absence of negative performance indicators and the high profile completion, the risk level is classified as low."
   },
   {
     "id": "tutor-061",
@@ -851,7 +1031,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 1,
-    "profileCompletionRate": 73
+    "profileCompletionRate": 73,
+    "riskScoreGeneratedAt": "2025-11-09T23:09:43.014Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0%, indicating a lack of positive engagement with students, although it's noted that they have not yet conducted any sessions. The presence of a support ticket despite no recorded sessions suggests potential issues in readiness or profile issues that could affect future student interactions. The incomplete profile at 73% might also contribute to a lack of student engagement or trust."
   },
   {
     "id": "tutor-062",
@@ -865,7 +1048,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 78
+    "profileCompletionRate": 78,
+    "riskScoreGeneratedAt": "2025-11-09T23:09:49.043Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating no successful engagement with students, which is critical for retention and satisfaction. Despite having no reschedules or no-shows, the total absence of sessions (Total Sessions: 0) and no current students suggest a complete lack of activity or engagement, posing a high risk for potential churn and negative impact on future students if any were to enroll."
   },
   {
     "id": "tutor-063",
@@ -879,7 +1065,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 2,
-    "profileCompletionRate": 67
+    "profileCompletionRate": 67,
+    "riskScoreGeneratedAt": "2025-11-09T23:09:57.817Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a lack of successful engagement with students, although it's noted that they have not yet conducted any sessions. The presence of two support tickets within a short period, despite no recorded sessions, suggests potential issues with readiness or professionalism. The incomplete profile (67%) also points to a lack of full commitment or preparation for tutoring responsibilities."
   },
   {
     "id": "tutor-064",
@@ -893,7 +1082,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 75
+    "profileCompletionRate": 75,
+    "riskScoreGeneratedAt": "2025-11-09T23:10:01.647Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating no successful engagement with students. Despite having no sessions conducted (total sessions: 0), these metrics suggest a lack of effectiveness or engagement in the tutoring process. The profile completion rate of 75% is below optimal, further suggesting potential issues with commitment or readiness to tutor effectively."
   },
   {
     "id": "tutor-065",
@@ -907,7 +1099,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 82
+    "profileCompletionRate": 82,
+    "riskScoreGeneratedAt": "2025-11-09T23:10:06.947Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a complete lack of positive engagement or success with any students. Despite having no sessions conducted, as indicated by the total sessions count of 0, the lack of any active students and no positive metrics present significant concerns about the tutor's potential effectiveness and engagement in the platform. This profile suggests a high risk of either not starting or not being able to retain students if they begin tutoring."
   },
   {
     "id": "tutor-066",
@@ -921,7 +1116,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 67
+    "profileCompletionRate": 67,
+    "riskScoreGeneratedAt": "2025-11-09T23:10:13.037Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a complete lack of positive engagement with students. Despite having no sessions conducted (total sessions: 0), these metrics suggest either a data error or a lack of participation in the tutoring platform. The profile completion rate of 67% further supports the notion of low engagement or readiness to effectively contribute as a tutor."
   },
   {
     "id": "tutor-067",
@@ -935,7 +1133,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 1,
-    "profileCompletionRate": 79
+    "profileCompletionRate": 79,
+    "riskScoreGeneratedAt": "2025-11-09T23:10:18.853Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a complete lack of positive engagement or success with any students. Despite having no sessions conducted (total sessions: 0), there is already a support ticket filed against them, suggesting potential issues with their readiness or professionalism. The combination of extremely poor performance metrics and early signs of potential issues with their service quality places them at a high risk of negatively impacting students or churning."
   },
   {
     "id": "tutor-068",
@@ -949,7 +1150,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 74
+    "profileCompletionRate": 74,
+    "riskScoreGeneratedAt": "2025-11-09T23:10:23.339Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0%, which are critical metrics given the importance of first session experiences. Despite having no reschedules or no-shows, the total absence of sessions (total sessions: 0) and no current students indicate a lack of engagement or activity. This complete inactivity, combined with a partially incomplete profile (74% completion), suggests a high risk of churn or inability to contribute positively to student experiences."
   },
   {
     "id": "tutor-069",
@@ -963,7 +1167,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 79
+    "profileCompletionRate": 79,
+    "riskScoreGeneratedAt": "2025-11-09T23:10:27.479Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a complete lack of positive engagement or feedback from students. Despite having no sessions conducted, as shown by a total session count of 0, these metrics suggest a potential inability to attract or retain students. The profile completion rate of 79% is below optimal, which could further hinder the tutor's ability to engage students effectively."
   },
   {
     "id": "tutor-070",
@@ -977,7 +1184,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 76
+    "profileCompletionRate": 76,
+    "riskScoreGeneratedAt": "2025-11-09T23:10:32.326Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a lack of positive engagement with students, although it's noted that they have not yet conducted any sessions. The absence of any sessions, reschedules, or no-shows, combined with a profile completion of only 76%, suggests a low level of engagement or readiness to start tutoring effectively. This profile indicates a high risk of either not starting or not succeeding in the tutoring role without significant changes."
   },
   {
     "id": "tutor-071",
@@ -991,7 +1201,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 63
+    "profileCompletionRate": 63,
+    "riskScoreGeneratedAt": "2025-11-09T23:10:37.024Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a lack of positive engagement with students, though it should be noted they have not yet conducted any sessions. The profile completion rate of 63% suggests a lack of full commitment or readiness to engage students effectively. Given these metrics, there is a high risk of negative impact on students and potential churn if sessions were to begin under these conditions."
   },
   {
     "id": "tutor-072",
@@ -1005,7 +1218,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 1,
-    "profileCompletionRate": 70
+    "profileCompletionRate": 70,
+    "riskScoreGeneratedAt": "2025-11-09T23:10:42.270Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a complete lack of positive engagement or successful tutoring sessions. Despite having no sessions conducted (total sessions: 0), there is already a support ticket raised within the last 48 hours, suggesting potential issues or concerns from students or the platform about the tutor's readiness or profile. The tutor's profile completion rate of 70% also suggests a lack of full commitment to setting up their tutoring profile effectively, which could impact student attraction and trust."
   },
   {
     "id": "tutor-073",
@@ -1019,7 +1235,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 2,
-    "profileCompletionRate": 87
+    "profileCompletionRate": 87,
+    "riskScoreGeneratedAt": "2025-11-09T23:10:46.464Z",
+    "riskScore": "high",
+    "riskReasoning": "Despite having no sessions conducted, which explains the zero ratings and success rates, the tutor has already accumulated two support tickets, which is concerning given the lack of student interaction. The high number of support tickets in the absence of any teaching activity suggests potential issues with readiness or professionalism. Additionally, the profile completion rate of 87% is decent but could indicate a lack of full commitment or preparation for starting the tutoring process effectively."
   },
   {
     "id": "tutor-074",
@@ -1033,7 +1252,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 89
+    "profileCompletionRate": 89,
+    "riskScoreGeneratedAt": "2025-11-09T23:10:51.545Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating either a lack of engagement or extremely poor performance in initial sessions. Despite having no reschedules or no-shows, the total absence of sessions (Total Sessions: 0) and current students (Current Student Count: 0) suggests a complete lack of activity or engagement, which is a significant concern for potential churn and negative impact on students."
   },
   {
     "id": "tutor-075",
@@ -1047,7 +1269,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 45
+    "profileCompletionRate": 45,
+    "riskScoreGeneratedAt": "2025-11-09T23:10:56.193Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a complete lack of positive engagement with students. Despite having no reschedules or no-shows, the tutor has not conducted any sessions at all, as shown by a total session count of 0. The profile completion rate of only 45% further suggests a lack of commitment or readiness to engage effectively with students. These factors combined indicate a high risk of churn and negative impact on student experience if not addressed."
   },
   {
     "id": "tutor-076",
@@ -1061,7 +1286,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 89
+    "profileCompletionRate": 89,
+    "riskScoreGeneratedAt": "2025-11-09T23:11:00.136Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a complete lack of positive engagement or feedback from students. Despite having no reschedules, no-shows, or recent support tickets, the total absence of sessions conducted (Total Sessions: 0) and current students (Current Student Count: 0) suggests either a new tutor with no experience or an inactive profile. This profile shows a high risk due to no demonstrated ability to engage or retain students."
   },
   {
     "id": "tutor-077",
@@ -1075,7 +1303,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 95
+    "profileCompletionRate": 95,
+    "riskScoreGeneratedAt": "2025-11-09T23:11:06.371Z",
+    "riskScore": "low",
+    "riskReasoning": "The tutor has not conducted any sessions yet, as indicated by a total session count of 0. Consequently, there are no negative metrics such as low ratings, no-shows, or reschedules. The high profile completion rate of 95% suggests readiness and professionalism. Given the absence of negative performance indicators and the high profile completion, the tutor currently poses a low risk."
   },
   {
     "id": "tutor-078",
@@ -1089,7 +1320,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 76
+    "profileCompletionRate": 76,
+    "riskScoreGeneratedAt": "2025-11-09T23:11:10.697Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating they have not successfully engaged or satisfied any students. Despite having no sessions completed, which explains some metrics like no-show count and reschedule rate being zero, the lack of any active students or session history suggests a potential disinterest or inability to commence tutoring duties. The profile completion rate of 76% is below optimal, further suggesting a lack of full commitment or readiness to tutor effectively."
   },
   {
     "id": "tutor-079",
@@ -1103,7 +1337,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 93
+    "profileCompletionRate": 93,
+    "riskScoreGeneratedAt": "2025-11-09T23:11:14.743Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a complete lack of positive feedback or successful engagement with students. Despite having no sessions conducted (total sessions = 0), these metrics suggest a potential inability or unwillingness to engage with the tutoring platform effectively. The absence of active students and no recorded sessions further underscore a lack of involvement or effectiveness in their role as a tutor."
   },
   {
     "id": "tutor-080",
@@ -1117,7 +1354,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 91
+    "profileCompletionRate": 91,
+    "riskScoreGeneratedAt": "2025-11-09T23:11:20.568Z",
+    "riskScore": "medium",
+    "riskReasoning": "Despite having no negative metrics such as no-shows or reschedules, the tutor's performance is concerning due to a total lack of activity, indicated by an average rating of 0.00, no sessions conducted, and no current students. This inactivity suggests a potential risk of disengagement or inability to attract and retain students, which could lead to future churn if not addressed. Additionally, the high profile completion rate shows some initial effort, but without active teaching, the risk remains uncertain."
   },
   {
     "id": "tutor-081",
@@ -1131,7 +1371,10 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 76
+    "profileCompletionRate": 76,
+    "riskScoreGeneratedAt": "2025-11-09T23:11:24.831Z",
+    "riskScore": "medium",
+    "riskReasoning": "The tutor has not yet conducted any sessions, as indicated by an average rating of 0.00 and a total session count of 0, which prevents assessment of their effectiveness or reliability in actual tutoring scenarios. The profile completion rate of 76% suggests some engagement, but it is not fully complete, which might affect student attraction and trust. Given the lack of data on actual tutoring performance and incomplete profile, there is a potential risk that needs monitoring."
   },
   {
     "id": "tutor-082",
@@ -1145,6 +1388,9 @@
     "noShowCount": 0,
     "currentStudentCount": 0,
     "supportTicketCount": 0,
-    "profileCompletionRate": 77
+    "profileCompletionRate": 77,
+    "riskScoreGeneratedAt": "2025-11-09T23:11:30.833Z",
+    "riskScore": "high",
+    "riskReasoning": "The tutor has an average rating of 0.00 and a first session success rate of 0.0%, indicating a complete lack of positive engagement or feedback from any sessions. However, these metrics are influenced by the fact that the total number of sessions conducted is zero, suggesting that the tutor has not yet started teaching or engaging with students. Despite no recorded no-shows or reschedules, the absence of any active students and the incomplete profile (77%) raise concerns about the tutor's commitment and readiness to start tutoring effectively."
   }
 ]
