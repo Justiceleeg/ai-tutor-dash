@@ -1,36 +1,183 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tutor Quality Scoring System
+
+An automated tutor performance evaluation system that processes session data, generates AI-powered insights, and presents actionable recommendations through an interactive dashboard.
+
+## Features
+
+- **Tutor Management**: View and analyze all tutors in the system
+- **Mock Data Generation**: Generate realistic tutor profiles for testing
+- **Performance Metrics**: Track ratings, sessions, and success rates
+- **AI-Powered Insights**: Risk scoring and pattern detection using OpenAI
+- **Interactive Dashboard**: Visualize data with charts and metrics
+
+## Tech Stack
+
+- **Framework**: Next.js 14+ with App Router
+- **Language**: TypeScript
+- **UI Library**: shadcn/ui (Radix UI + Tailwind CSS)
+- **Charts**: Recharts
+- **AI/LLM**: Vercel AI SDK with OpenAI GPT-4
+- **Data Storage**: Static JSON files
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 20+ 
+- pnpm package manager
+- OpenAI API key (for AI features)
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Set up environment variables:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cp .env.example .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Then add your OpenAI API key to `.env.local`:
 
-## Learn More
+```
+OPENAI_API_KEY=your_key_here
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Generate Mock Data
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Generate tutor profiles (50-100 tutors):
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+pnpm generate:data
+```
 
-## Deploy on Vercel
+This creates `/data/tutors.json` with realistic tutor data.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Run Development Server
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the application.
+
+### Build for Production
+
+```bash
+pnpm build
+pnpm start
+```
+
+## Project Structure
+
+```
+├── app/                    # Next.js app router pages
+│   ├── page.tsx           # Homepage
+│   └── tutors/
+│       └── page.tsx       # Tutors list page
+├── components/
+│   ├── ui/                # shadcn/ui components
+│   └── tutors/            # Tutor-specific components
+│       └── TutorTable.tsx
+├── lib/
+│   ├── types.ts           # TypeScript interfaces
+│   ├── data/
+│   │   ├── generator.ts   # Mock data generation
+│   │   └── tutors.ts      # Data access functions
+│   └── utils.ts           # Utility functions
+├── data/                  # Generated JSON data files
+│   └── tutors.json
+└── docs/                  # Documentation
+    ├── brief.md
+    ├── ARCHITECTURE.md
+    └── TASKS.md
+```
+
+## Data Models
+
+### Tutor
+
+```typescript
+{
+  id: string              // Unique tutor ID (e.g., "tutor-001")
+  name: string            // Full name
+  email: string           // Email address
+  joinDate: Date          // When tutor joined
+  totalSessions: number   // Total sessions completed
+  avgRating: number       // Average rating (1-5)
+  firstSessionSuccessRate: number  // % of first sessions rated 4+
+  rescheduleRate: number  // % of sessions rescheduled
+  noShowCount: number     // Number of no-shows
+  riskScore?: "low" | "medium" | "high"  // AI-generated risk level
+  riskReasoning?: string  // Explanation for risk score
+  recommendations?: string[]  // Actionable recommendations
+}
+```
+
+### Session (Coming in Slice 2)
+
+```typescript
+{
+  id: string
+  tutorId: string
+  studentId: string
+  date: Date
+  isFirstSession: boolean
+  rating: number  // 1-5 stars
+  duration: number  // minutes
+  wasRescheduled: boolean
+  wasNoShow: boolean
+  wasCancelled: boolean
+  feedback?: string
+}
+```
+
+## Development Roadmap
+
+The project is built in vertical slices:
+
+- [x] **Slice 1**: Foundation + Mock Data ✅
+  - Next.js setup
+  - Data generation
+  - Tutor list UI
+
+- [ ] **Slice 2**: Session Data + Metrics
+  - Session generation
+  - Metrics calculation
+  - Dashboard with charts
+
+- [ ] **Slice 3**: AI Risk Scoring
+  - OpenAI integration
+  - Risk score generation
+  - Visual risk indicators
+
+- [ ] **Slice 4**: Pattern Detection
+  - System-wide analysis
+  - Recommendations
+  - Insights panel
+
+- [ ] **Slice 5**: Detail Views
+  - Individual tutor pages
+  - Session timelines
+  - Filtering & navigation
+
+## Scripts
+
+- `pnpm dev` - Start development server
+- `pnpm build` - Build for production
+- `pnpm start` - Start production server
+- `pnpm lint` - Run ESLint
+- `pnpm generate:data` - Generate mock tutor data
+
+## Contributing
+
+This project follows the OpenSpec spec-driven development workflow. See `openspec/AGENTS.md` for details.
+
+## License
+
+Private project - All rights reserved
