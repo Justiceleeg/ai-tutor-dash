@@ -1,50 +1,80 @@
 /**
- * Homepage
- * Landing page with navigation to the tutor quality dashboard
+ * Homepage / Dashboard
+ * Main dashboard displaying system metrics and visualizations
  */
 
 import Link from "next/link";
-import { getTutorCount } from "@/lib/data/tutors";
+import { getTutors } from "@/lib/data/tutors";
+import { getSessions } from "@/lib/data/sessions";
+import { calculateSystemMetrics } from "@/lib/data/processor";
+import { MetricCard } from "@/components/dashboard/MetricCard";
+import { RatingDistributionChart } from "@/components/dashboard/RatingDistributionChart";
+import { Users, Calendar, Star, TrendingUp } from "lucide-react";
 
-export default function Home() {
-  const tutorCount = getTutorCount();
+export default function DashboardPage() {
+  // Load and process data
+  const tutors = getTutors();
+  const sessions = getSessions();
+  const metrics = calculateSystemMetrics(tutors, sessions);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-white to-zinc-50 dark:from-zinc-950 dark:to-black">
-      <main className="flex w-full max-w-4xl flex-col items-center justify-center px-6 py-32">
-        <div className="flex flex-col items-center gap-8 text-center">
-          <h1 className="text-5xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-6xl">
-            Tutor Quality Dashboard
-          </h1>
-          <p className="max-w-2xl text-xl text-zinc-600 dark:text-zinc-400 leading-8">
-            Automated tutor performance evaluation system. Identify coaching
-            opportunities, predict churn, and provide actionable insights.
+    <div className="container mx-auto py-10">
+      {/* Header */}
+      <div className="mb-8">
+        <h1 className="text-4xl font-bold tracking-tight">Tutor Quality Dashboard</h1>
+        <p className="text-muted-foreground mt-2">
+          Monitor tutor performance, track metrics, and identify coaching opportunities
+        </p>
+      </div>
+
+      {/* Metric Cards */}
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 mb-8">
+        <MetricCard
+          title="Total Tutors"
+          value={metrics.totalTutors}
+          description="Active in the system"
+          icon={Users}
+        />
+        <MetricCard
+          title="Total Sessions"
+          value={metrics.totalSessions.toLocaleString()}
+          description="Sessions completed"
+          icon={Calendar}
+        />
+        <MetricCard
+          title="Average Rating"
+          value={`${metrics.avgRating} / 5.0`}
+          description="Across all sessions"
+          icon={Star}
+        />
+        <MetricCard
+          title="Active Tutors"
+          value={metrics.activeTutors}
+          description="With sessions in last 30 days"
+          icon={TrendingUp}
+        />
+      </div>
+
+      {/* Rating Distribution Chart */}
+      <div className="mb-8">
+        <div className="rounded-lg border bg-card p-6">
+          <h2 className="text-xl font-semibold mb-4">Rating Distribution</h2>
+          <p className="text-sm text-muted-foreground mb-4">
+            Distribution of session ratings across the platform
           </p>
-
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <Link
-              href="/tutors"
-              className="flex h-14 items-center justify-center rounded-lg bg-zinc-900 px-8 text-base font-semibold text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200 sm:w-[200px]"
-            >
-              View All Tutors
-            </Link>
-          </div>
-
-          {tutorCount > 0 && (
-            <div className="mt-12 rounded-lg border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900">
-              <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                System Status
-              </p>
-              <p className="mt-2 text-3xl font-bold text-zinc-900 dark:text-zinc-50">
-                {tutorCount} Tutors
-              </p>
-              <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-                Ready for analysis
-              </p>
-            </div>
-          )}
+          <RatingDistributionChart data={metrics.ratingDistribution} />
         </div>
-      </main>
+      </div>
+
+      {/* Navigation */}
+      <div className="flex gap-4">
+        <Link
+          href="/tutors"
+          className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          View All Tutors
+        </Link>
+      </div>
     </div>
   );
 }

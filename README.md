@@ -5,10 +5,12 @@ An automated tutor performance evaluation system that processes session data, ge
 ## Features
 
 - **Tutor Management**: View and analyze all tutors in the system
-- **Mock Data Generation**: Generate realistic tutor profiles for testing
-- **Performance Metrics**: Track ratings, sessions, and success rates
-- **AI-Powered Insights**: Risk scoring and pattern detection using OpenAI
-- **Interactive Dashboard**: Visualize data with charts and metrics
+- **Session Tracking**: Track ~2000 sessions with ratings and status
+- **Mock Data Generation**: Generate realistic tutor and session data
+- **Performance Metrics**: Track ratings, success rates, reschedules, and no-shows
+- **Interactive Dashboard**: System-wide metrics with visual charts
+- **Rating Distribution**: Bar chart visualization of session ratings
+- **AI-Powered Insights**: Risk scoring and pattern detection using OpenAI (coming in Slice 3)
 
 ## Tech Stack
 
@@ -50,13 +52,15 @@ OPENAI_API_KEY=your_key_here
 
 ### Generate Mock Data
 
-Generate tutor profiles (50-100 tutors):
+Generate tutor profiles and sessions:
 
 ```bash
 pnpm generate:data
 ```
 
-This creates `/data/tutors.json` with realistic tutor data.
+This creates:
+- `/data/tutors.json` with 50-100 tutors
+- `/data/sessions.json` with ~2000-3000 sessions linked to tutors
 
 ### Run Development Server
 
@@ -113,6 +117,9 @@ pnpm start
   firstSessionSuccessRate: number  // % of first sessions rated 4+
   rescheduleRate: number  // % of sessions rescheduled
   noShowCount: number     // Number of no-shows
+  currentStudentCount: number  // Active students (last 30 days)
+  supportTicketCount: number   // Support tickets (last 48 hours)
+  profileCompletionRate: number  // Profile completion % (0-100)
   riskScore?: "low" | "medium" | "high"  // AI-generated risk level
   riskReasoning?: string  // Explanation for risk score
   recommendations?: string[]  // Actionable recommendations
@@ -146,8 +153,8 @@ The project is built in vertical slices:
   - Data generation
   - Tutor list UI
 
-- [ ] **Slice 2**: Session Data + Metrics
-  - Session generation
+- [x] **Slice 2**: Session Data + Metrics ✅
+  - Session generation (~2000 sessions)
   - Metrics calculation
   - Dashboard with charts
 

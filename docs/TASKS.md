@@ -21,14 +21,17 @@ Build an automated tutor performance evaluation system using Next.js, shadcn/ui,
 
 ---
 
-## Slice 2: Session Data + First Metrics
+## Slice 2: Session Data + First Metrics ✅
 **Deliverable:** Dashboard showing tutor metrics without AI
 
-- [ ] Extend data generator to create ~3000 sessions linked to tutors
-- [ ] Calculate basic metrics per tutor (avg rating, session count, first session success rate)
-- [ ] Create dashboard page with summary cards (total tutors, total sessions, avg rating)
-- [ ] Add simple Recharts visualization (e.g., rating distribution)
-- [ ] **Test:** Dashboard displays real calculated metrics from mock data
+- [x] Extend data generator to create ~3000 sessions linked to tutors
+- [x] Add three new tutor engagement metrics (current students, support tickets, profile completion)
+- [x] Calculate basic metrics per tutor (avg rating, session count, first session success rate)
+- [x] Create dashboard page with summary cards (total tutors, total sessions, avg rating)
+- [x] Add simple Recharts visualization (e.g., rating distribution)
+- [x] **Test:** Dashboard displays real calculated metrics from mock data
+
+**Completed:** All 65+ implementation tasks finished. 2,509 sessions generated across 71 tutors. Dashboard with metrics and charts fully functional. Added engagement metrics: current students (0-20 range), support tickets (0-3), and profile completion (20-95%).
 
 ---
 

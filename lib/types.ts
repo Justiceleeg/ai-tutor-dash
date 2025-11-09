@@ -12,6 +12,9 @@ export interface Tutor {
   firstSessionSuccessRate: number;
   rescheduleRate: number;
   noShowCount: number;
+  currentStudentCount: number; // Active students in last 30 days
+  supportTicketCount: number; // Support tickets in last 48 hours
+  profileCompletionRate: number; // Profile completion percentage (0-100)
   riskScore?: "low" | "medium" | "high";
   riskReasoning?: string;
   recommendations?: string[];

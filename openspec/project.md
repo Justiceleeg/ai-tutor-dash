@@ -68,7 +68,7 @@
 - `/api/analyze-patterns` - OpenAI pattern detection endpoint
 
 #### Data Models
-- **Tutor:** id, name, email, joinDate, totalSessions, avgRating, firstSessionSuccessRate, rescheduleRate, noShowCount, riskScore, riskReasoning, recommendations
+- **Tutor:** id, name, email, joinDate, totalSessions, avgRating, firstSessionSuccessRate, rescheduleRate, noShowCount, currentStudentCount, supportTicketCount, profileCompletionRate, riskScore, riskReasoning, recommendations
 - **Session:** id, tutorId, studentId, date, isFirstSession, rating, duration, wasRescheduled, wasNoShow, wasCancelled, feedback
 - **Insights:** generatedAt, patterns (firstSessionFailures, commonRiskFactors), systemRecommendations
 
@@ -122,12 +122,89 @@ This system operates in a tutoring platform where:
 - **Medium Risk:** Some concerning patterns emerging
 - **High Risk:** Multiple red flags, likely to churn or impact student experience
 
-### Key Metrics
-- Average rating (1-5 scale)
-- First session success rate
-- Reschedule rate
-- No-show count
-- Total sessions completed
+### Key Metrics Definitions
+
+Understanding these metrics is critical for AI analysis and coaching recommendations.
+
+#### Average Rating
+- **Scale:** 1-5 stars per session
+- **Calculation:** Mean of all session ratings for a tutor
+- **Interpretation:** Overall student satisfaction across all sessions
+- **Typical range:** 3.5-4.5 for most tutors
+- **Red flag:** <3.0 indicates serious quality issues
+
+#### First Session Success Rate
+- **Definition:** Percentage of a tutor's first-time sessions with new students rated 4+ stars
+- **Calculation:** (First sessions rated ≥4 stars) / (Total first sessions) × 100
+- **What counts as "first session":** When a specific student meets with a specific tutor for the first time
+- **Success threshold:** Rating of 4 or 5 stars (out of 5)
+- **Critical threshold:** <50% indicates high churn risk
+- **Context:** 24% of tutor churn is directly correlated with poor first session performance
+- **Why it matters:** First impressions are critical - students who have a bad first session rarely return to that tutor
+- **Color coding in UI:**
+  - Green (≥75%): Excellent first impression skills
+  - Yellow (50-74%): Adequate but room for improvement
+  - Red (<50%): High risk - immediate coaching needed
+
+#### Reschedule Rate
+- **Definition:** Percentage of sessions that were rescheduled by the tutor
+- **Calculation:** (Rescheduled sessions) / (Total sessions) × 100
+- **Context:** 98.2% of reschedules are tutor-initiated (not student-initiated)
+- **Typical range:** 5-10% is normal
+- **Red flag:** >15% indicates reliability or scheduling issues
+- **Why it matters:** High reschedule rates frustrate students and indicate poor time management
+
+#### No-Show Count
+- **Definition:** Total number of sessions where the tutor failed to attend
+- **Measurement:** Absolute count (not percentage)
+- **Context:** 16% of tutor replacements are due to no-shows
+- **Critical threshold:** Even 1-2 no-shows in a short period is concerning
+- **Red flag:** 3+ no-shows indicates serious reliability problems
+- **Why it matters:** No-shows severely damage student trust and platform reputation
+
+#### Total Sessions Completed
+- **Definition:** Count of all sessions a tutor has successfully completed
+- **Use:** Provides context for other metrics (sample size matters)
+- **Interpretation:** 
+  - <10 sessions: Too early for reliable metrics
+  - 10-30 sessions: Emerging patterns visible
+  - 30+ sessions: Statistically significant trends
+- **Why it matters:** A 50% first session success rate based on 2 sessions is less concerning than based on 20 sessions
+
+#### Current Student Count
+- **Definition:** Number of unique students the tutor has worked with in the last 30 days
+- **Calculation:** Count of distinct student IDs in sessions within past 30 days
+- **Typical range:** 5-15 students for active tutors
+- **Interpretation:**
+  - 0-2 students: Very low activity, possible disengagement
+  - 3-10 students: Healthy, manageable load
+  - 11-20 students: High activity, monitor for quality impact
+  - 20+ students: Risk of burnout, quality may suffer
+- **Why it matters:** High student load combined with declining metrics indicates burnout risk
+
+#### Support Ticket Count (48 hours)
+- **Definition:** Number of support tickets filed about this tutor in the last 48 hours
+- **Measurement:** Absolute count
+- **Typical value:** 0 (most tutors have no recent tickets)
+- **Critical threshold:** 
+  - 0: Normal, no recent issues
+  - 1: Minor issue, monitor situation
+  - 2: Concerning, investigate immediately
+  - 3+: Critical, urgent intervention needed
+- **Why it matters:** Spike in support tickets is an early warning system for emerging problems requiring immediate attention
+- **Context:** Tickets can indicate student complaints, technical issues, or communication problems
+
+#### Profile Completion Rate
+- **Definition:** Percentage of tutor profile fields that have been completed
+- **Measurement:** 0-100% scale
+- **Typical range:** 70-95% for engaged tutors
+- **Interpretation:**
+  - 80-100%: Highly engaged, professional presentation
+  - 60-79%: Adequate, but could improve
+  - 40-59%: Concerning, shows lack of engagement
+  - <40%: Red flag, likely to churn
+- **Why it matters:** Profile completion is a strong predictor of tutor engagement and commitment to the platform
+- **Context:** Tutors with incomplete profiles are statistically more likely to churn
 
 ## Important Constraints
 

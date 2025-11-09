@@ -19,11 +19,16 @@ Without these metrics, we cannot:
 
 - Extend data generation to create ~3,000 mock sessions linked to tutors
 - Add Session data model with ratings, timestamps, and status flags
+- Add three new tutor metrics:
+  - **Current Student Count**: Unique students in last 30 days (calculated)
+  - **Support Ticket Count**: Tickets in last 48 hours (generated)
+  - **Profile Completion Rate**: Profile completion percentage (generated)
 - Implement metrics calculation engine for per-tutor statistics:
   - Average rating across all sessions
   - Total session count
   - First session success rate
   - Session completion rate
+  - Current student count (NEW)
 - Build dashboard page with summary metrics cards
 - Add Recharts visualization for rating distribution
 - Update tutor table to display calculated metrics
