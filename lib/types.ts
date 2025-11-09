@@ -2,6 +2,8 @@
  * Core data models for the Tutor Quality Scoring System
  */
 
+export type RiskLevel = "low" | "medium" | "high";
+
 export interface Tutor {
   id: string;
   name: string;
@@ -15,8 +17,9 @@ export interface Tutor {
   currentStudentCount: number; // Active students in last 30 days
   supportTicketCount: number; // Support tickets in last 48 hours
   profileCompletionRate: number; // Profile completion percentage (0-100)
-  riskScore?: "low" | "medium" | "high";
+  riskScore?: RiskLevel;
   riskReasoning?: string;
+  riskScoreGeneratedAt?: Date;
   recommendations?: string[];
 }
 

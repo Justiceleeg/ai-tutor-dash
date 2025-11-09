@@ -16,6 +16,55 @@ function getRandomTutorCount(): number {
 }
 
 /**
+ * Tutor risk profile - determines behavior patterns for session generation
+ */
+interface TutorRiskProfile {
+  rescheduleChance: number; // 0-1
+  noShowChance: number; // 0-1
+  cancellationChance: number; // 0-1
+  avgRatingModifier: number; // -1 to +1
+  firstSessionPerformance: number; // 0-1 (lower = worse first sessions)
+}
+
+/**
+ * Assign a risk profile to a tutor based on their characteristics
+ */
+function getTutorRiskProfile(profileCompletionRate: number, supportTicketCount: number): TutorRiskProfile {
+  // Determine risk tier based on profile completion and support tickets
+  const hasLowCompletion = profileCompletionRate < 60;
+  const hasHighTickets = supportTicketCount >= 2;
+  
+  if (hasLowCompletion || hasHighTickets) {
+    // High-risk tutor (unreliable, poor performance)
+    return {
+      rescheduleChance: faker.number.float({ min: 0.15, max: 0.25 }), // 15-25% reschedule rate
+      noShowChance: faker.number.float({ min: 0.05, max: 0.10 }), // 5-10% no-show rate
+      cancellationChance: faker.number.float({ min: 0.08, max: 0.12 }), // 8-12% cancellation
+      avgRatingModifier: faker.number.float({ min: -1.0, max: -0.5 }), // Lower ratings
+      firstSessionPerformance: faker.number.float({ min: 0.3, max: 0.5 }), // 30-50% first session success
+    };
+  } else if (profileCompletionRate < 70 || supportTicketCount === 1) {
+    // Medium-risk tutor (some issues)
+    return {
+      rescheduleChance: faker.number.float({ min: 0.08, max: 0.15 }), // 8-15% reschedule rate
+      noShowChance: faker.number.float({ min: 0.02, max: 0.04 }), // 2-4% no-show rate
+      cancellationChance: faker.number.float({ min: 0.04, max: 0.08 }), // 4-8% cancellation
+      avgRatingModifier: faker.number.float({ min: -0.5, max: 0 }), // Slightly lower ratings
+      firstSessionPerformance: faker.number.float({ min: 0.55, max: 0.70 }), // 55-70% first session success
+    };
+  } else {
+    // Low-risk tutor (reliable, good performance)
+    return {
+      rescheduleChance: faker.number.float({ min: 0.02, max: 0.06 }), // 2-6% reschedule rate
+      noShowChance: faker.number.float({ min: 0.001, max: 0.01 }), // 0.1-1% no-show rate
+      cancellationChance: faker.number.float({ min: 0.02, max: 0.04 }), // 2-4% cancellation
+      avgRatingModifier: faker.number.float({ min: 0, max: 0.5 }), // Higher ratings
+      firstSessionPerformance: faker.number.float({ min: 0.75, max: 0.95 }), // 75-95% first session success
+    };
+  }
+}
+
+/**
  * Generate a single tutor profile with realistic data
  */
 function generateTutor(index: number): Tutor {
@@ -81,6 +130,9 @@ export function generateSessions(tutors: Tutor[]): Session[] {
   console.log(`Generating ~${targetSessionCount} sessions...`);
   
   for (const tutor of tutors) {
+    // Get tutor's risk profile based on their characteristics
+    const riskProfile = getTutorRiskProfile(tutor.profileCompletionRate, tutor.supportTicketCount);
+    
     // Each tutor gets between 20-50 sessions (weighted toward 30-40)
     const sessionCount = Math.floor(faker.number.int({ min: 20, max: 50 }));
     
@@ -90,32 +142,38 @@ export function generateSessions(tutors: Tutor[]): Session[] {
       // Generate session date within past 6 months
       const date = faker.date.recent({ days: 180 });
       
-      // Rating weighted toward positive (3-5 stars more common)
-      // First sessions have slightly lower ratings on average
+      // Rating influenced by tutor's risk profile
+      // First sessions have slightly lower ratings on average, modified by tutor performance
       let rating: number;
       if (isFirstSession) {
-        const rand = Math.random();
-        if (rand < 0.15) rating = 5;
-        else if (rand < 0.35) rating = 4;
-        else if (rand < 0.60) rating = 3;
-        else if (rand < 0.80) rating = 2;
-        else rating = 1;
+        // First session ratings influenced by tutor's first session performance
+        const successThreshold = riskProfile.firstSessionPerformance;
+        const isSuccessfulFirstSession = Math.random() < successThreshold;
+        
+        if (isSuccessfulFirstSession) {
+          // Successful first session (4-5 stars)
+          rating = Math.random() < 0.6 ? 5 : 4;
+        } else {
+          // Poor first session (1-3 stars)
+          const rand = Math.random();
+          if (rand < 0.4) rating = 3;
+          else if (rand < 0.7) rating = 2;
+          else rating = 1;
+        }
       } else {
-        const rand = Math.random();
-        if (rand < 0.40) rating = 5;
-        else if (rand < 0.75) rating = 4;
-        else if (rand < 0.90) rating = 3;
-        else if (rand < 0.97) rating = 2;
-        else rating = 1;
+        // Regular session ratings
+        const baseRating = faker.number.float({ min: 3.0, max: 5.0 });
+        const modifiedRating = Math.max(1, Math.min(5, baseRating + riskProfile.avgRatingModifier));
+        rating = Math.round(modifiedRating);
       }
       
       // Duration between 30-90 minutes
       const duration = faker.number.int({ min: 30, max: 90 });
       
-      // Status flags (these should be mutually exclusive mostly)
-      const wasRescheduled = Math.random() < 0.08; // 8% rescheduled
-      const wasNoShow = !wasRescheduled && Math.random() < 0.03; // 3% no-shows
-      const wasCancelled = !wasRescheduled && !wasNoShow && Math.random() < 0.05; // 5% cancelled
+      // Risk indicators based on tutor's profile (mutually exclusive)
+      const wasRescheduled = Math.random() < riskProfile.rescheduleChance;
+      const wasNoShow = !wasRescheduled && Math.random() < riskProfile.noShowChance;
+      const wasCancelled = !wasRescheduled && !wasNoShow && Math.random() < riskProfile.cancellationChance;
       
       const session: Session = {
         id: `session-${String(sessions.length + 1).padStart(4, "0")}`,

@@ -3,7 +3,7 @@
  * Displays a list of tutors with their performance metrics in a responsive table format
  */
 
-import { Tutor } from "@/lib/types";
+import { Tutor, RiskLevel } from "@/lib/types";
 import {
   Table,
   TableBody,
@@ -12,7 +12,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Star, Users, AlertCircle, CheckCircle2 } from "lucide-react";
+import { Star, Users, AlertCircle, CheckCircle2, AlertTriangle, ShieldCheck, ShieldAlert } from "lucide-react";
 
 interface TutorTableProps {
   tutors: Tutor[];
@@ -91,6 +91,49 @@ function formatProfileCompletion(rate: number) {
   );
 }
 
+/**
+ * Format risk score with color-coded badge and tooltip
+ */
+function formatRiskScore(riskScore?: RiskLevel, riskReasoning?: string) {
+  if (!riskScore) {
+    return (
+      <div className="flex items-center justify-center gap-1.5 text-muted-foreground">
+        <span className="text-xs">Not assessed</span>
+      </div>
+    );
+  }
+  
+  let bgColor = "";
+  let textColor = "";
+  let Icon = ShieldCheck;
+  
+  if (riskScore === "low") {
+    bgColor = "bg-green-100 dark:bg-green-950";
+    textColor = "text-green-700 dark:text-green-300";
+    Icon = ShieldCheck;
+  } else if (riskScore === "medium") {
+    bgColor = "bg-yellow-100 dark:bg-yellow-950";
+    textColor = "text-yellow-700 dark:text-yellow-300";
+    Icon = AlertTriangle;
+  } else {
+    bgColor = "bg-red-100 dark:bg-red-950";
+    textColor = "text-red-700 dark:text-red-300";
+    Icon = ShieldAlert;
+  }
+  
+  return (
+    <div className="flex items-center justify-center">
+      <div
+        className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 ${bgColor} ${textColor}`}
+        title={riskReasoning || "No reasoning available"}
+      >
+        <Icon className="h-3.5 w-3.5" />
+        <span className="text-xs font-medium capitalize">{riskScore}</span>
+      </div>
+    </div>
+  );
+}
+
 export function TutorTable({ tutors }: TutorTableProps) {
   if (tutors.length === 0) {
     return (
@@ -108,6 +151,7 @@ export function TutorTable({ tutors }: TutorTableProps) {
             <TableHead>ID</TableHead>
             <TableHead>Name</TableHead>
             <TableHead>Email</TableHead>
+            <TableHead className="text-center">Risk Score</TableHead>
             <TableHead className="text-center">Avg Rating</TableHead>
             <TableHead className="text-right">Sessions</TableHead>
             <TableHead className="text-right">Current Students</TableHead>
@@ -123,6 +167,9 @@ export function TutorTable({ tutors }: TutorTableProps) {
               <TableCell className="font-medium">{tutor.id}</TableCell>
               <TableCell>{tutor.name}</TableCell>
               <TableCell className="text-muted-foreground">{tutor.email}</TableCell>
+              <TableCell className="text-center">
+                {formatRiskScore(tutor.riskScore, tutor.riskReasoning)}
+              </TableCell>
               <TableCell className="text-center">{formatRating(tutor.avgRating)}</TableCell>
               <TableCell className="text-right">{tutor.totalSessions}</TableCell>
               <TableCell className="text-right">
