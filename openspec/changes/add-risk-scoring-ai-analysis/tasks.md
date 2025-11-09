@@ -20,10 +20,10 @@
 - [x] 3.6 Add environment variable check for OPENAI_API_KEY
 
 ## 4. Risk Score Generation & Persistence
-- [ ] 4.1 Create script or API endpoint to process all tutors
-- [ ] 4.2 Send batch requests to OpenAI (consider rate limits)
-- [ ] 4.3 Save risk scores and reasoning back to tutors.json
-- [ ] 4.4 Add timestamp for when risk scores were generated
+- [x] 4.1 Create script or API endpoint to process all tutors
+- [x] 4.2 Send batch requests to OpenAI (consider rate limits)
+- [x] 4.3 Save risk scores and reasoning back to tutors.json
+- [x] 4.4 Add timestamp for when risk scores were generated
 
 ## 5. UI Enhancement
 - [x] 5.1 Add risk score column to TutorTable component
@@ -33,9 +33,16 @@
 - [x] 5.5 Ensure responsive layout with new column
 
 ## 6. Testing & Validation
-- [ ] 6.1 Verify all tutors have risk scores after generation
-- [ ] 6.2 Manually review AI reasoning for accuracy and helpfulness
-- [ ] 6.3 Confirm UI displays risk scores correctly with proper color coding
-- [ ] 6.4 Test with different tutor risk profiles (low/medium/high)
-- [ ] 6.5 Verify API endpoint handles errors properly
+- [x] 6.1 Verify all tutors have risk scores after generation
+- [x] 6.2 Manually review AI reasoning for accuracy and helpfulness
+- [x] 6.3 Confirm UI displays risk scores correctly with proper color coding
+- [x] 6.4 Test with different tutor risk profiles (low/medium/high)
+- [x] 6.5 Verify API endpoint handles errors properly
+
+## 7. Additional Enhancements (Bonus)
+- [x] 7.1 Add table sorting functionality (default: highest risk first)
+- [x] 7.2 Make all metric columns sortable with visual indicators
+- [x] 7.3 Create modal dialog for detailed risk reasoning view
+- [x] 7.4 Replace tooltip with clickable badge that opens modal
+- [x] 7.5 Display all tutor metrics in modal alongside AI reasoning
 
