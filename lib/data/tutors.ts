@@ -32,7 +32,16 @@ export function getTutors(): Tutor[] {
  */
 export function getTutorById(id: string): Tutor | undefined {
   const tutors = getTutors();
-  return tutors.find((tutor) => tutor.id === id);
+  const tutor = tutors.find((t) => t.id === id);
+  
+  if (!tutor) return undefined;
+  
+  // Ensure all dates are properly converted
+  return {
+    ...tutor,
+    joinDate: new Date(tutor.joinDate),
+    riskScoreGeneratedAt: tutor.riskScoreGeneratedAt ? new Date(tutor.riskScoreGeneratedAt) : undefined,
+  };
 }
 
 /**

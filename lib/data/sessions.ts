@@ -28,11 +28,13 @@ export function getSessions(): Session[] {
 }
 
 /**
- * Get sessions for a specific tutor
+ * Get sessions for a specific tutor, sorted by date (newest first)
  */
 export function getSessionsByTutorId(tutorId: string): Session[] {
   const sessions = getSessions();
-  return sessions.filter((session) => session.tutorId === tutorId);
+  return sessions
+    .filter((session) => session.tutorId === tutorId)
+    .sort((a, b) => b.date.getTime() - a.date.getTime());
 }
 
 /**

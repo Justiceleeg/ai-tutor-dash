@@ -6,6 +6,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Tutor, RiskLevel, Recommendation } from "@/lib/types";
 import {
   Table,
@@ -339,7 +340,14 @@ export function TutorTable({ tutors }: TutorTableProps) {
             {sortedTutors.map((tutor) => (
               <TableRow key={tutor.id}>
                 <TableCell className="font-medium">{tutor.id}</TableCell>
-                <TableCell>{tutor.name}</TableCell>
+                <TableCell>
+                  <Link 
+                    href={`/tutors/${tutor.id}`}
+                    className="font-medium hover:text-primary hover:underline transition-colors"
+                  >
+                    {tutor.name}
+                  </Link>
+                </TableCell>
                 <TableCell className="text-muted-foreground">{tutor.email}</TableCell>
                 <TableCell className="text-center">
                   {formatRiskScore(tutor.riskScore, () => handleRiskClick(tutor))}
