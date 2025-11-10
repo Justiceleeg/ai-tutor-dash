@@ -381,7 +381,7 @@ export function TutorTable({ tutors }: TutorTableProps) {
 
       {/* Risk Reasoning Modal */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="max-w-2xl">
+        <DialogContent className="max-w-2xl max-h-[85vh] flex flex-col">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
               Risk Assessment: {selectedTutor?.name}
@@ -409,7 +409,7 @@ export function TutorTable({ tutors }: TutorTableProps) {
             </DialogDescription>
           </DialogHeader>
           
-          <div className="space-y-4">
+          <div className="space-y-4 overflow-y-auto pr-2">
             {/* Performance Metrics */}
             <div className="grid grid-cols-2 gap-4 p-4 bg-muted/50 rounded-lg">
               <div>

@@ -45,6 +45,12 @@ export async function POST() {
     // Process each tutor
     for (const tutor of tutors) {
       try {
+        // Skip new tutors with no sessions yet
+        if (tutor.totalSessions === 0) {
+          console.log(`⊘ ${tutor.id} (${tutor.name}): SKIPPED - New tutor with no sessions`);
+          continue;
+        }
+
         // Build prompt with tutor's performance metrics
         const prompt = `You are an expert tutor performance analyst. Analyze this tutor's performance metrics and classify their risk level.
 
