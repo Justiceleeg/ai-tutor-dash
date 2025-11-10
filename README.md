@@ -4,13 +4,15 @@ An automated tutor performance evaluation system that processes session data, ge
 
 ## Features
 
-- **Tutor Management**: View and analyze all tutors in the system
+- **Tutor Management**: View and analyze all tutors in the system with advanced filtering
+- **Individual Tutor Pages**: Detailed performance views with session timelines and risk analysis
 - **Session Tracking**: Track ~2000 sessions with ratings and status
-- **Mock Data Generation**: Generate realistic tutor and session data
 - **Performance Metrics**: Track ratings, success rates, reschedules, and no-shows
 - **Interactive Dashboard**: System-wide metrics with visual charts
-- **Rating Distribution**: Bar chart visualization of session ratings
-- **AI-Powered Insights**: Risk scoring and pattern detection using OpenAI (coming in Slice 3)
+- **AI-Powered Insights**: Risk scoring, pattern detection, and actionable recommendations using OpenAI
+- **Filtering System**: Filter tutors by risk level, rating, success rate, support tickets, and profile completion
+- **Session Timeline**: Recharts visualization showing rating trends over time
+- **Mock Data Generation**: Generate realistic tutor and session data
 
 ## Tech Stack
 
@@ -81,25 +83,47 @@ pnpm start
 
 ```
 ├── app/                    # Next.js app router pages
-│   ├── page.tsx           # Homepage
+│   ├── page.tsx           # Dashboard homepage
+│   ├── api/               # API routes
+│   │   ├── generate-risk-scores/  # AI risk scoring
+│   │   └── analyze-patterns/      # Pattern analysis & recommendations
 │   └── tutors/
-│       └── page.tsx       # Tutors list page
+│       ├── page.tsx       # Tutors list with filtering
+│       └── [id]/          # Dynamic tutor detail pages
+│           ├── page.tsx
+│           ├── loading.tsx
+│           └── not-found.tsx
 ├── components/
 │   ├── ui/                # shadcn/ui components
+│   ├── dashboard/         # Dashboard-specific components
+│   │   └── InsightsPanel.tsx
 │   └── tutors/            # Tutor-specific components
-│       └── TutorTable.tsx
+│       ├── TutorTable.tsx
+│       ├── TutorDetailView.tsx
+│       ├── SessionTimeline.tsx
+│       ├── TutorFilters.tsx
+│       └── TutorsPageClient.tsx
 ├── lib/
 │   ├── types.ts           # TypeScript interfaces
 │   ├── data/
 │   │   ├── generator.ts   # Mock data generation
-│   │   └── tutors.ts      # Data access functions
+│   │   ├── tutors.ts      # Data access functions
+│   │   ├── sessions.ts    # Session data access
+│   │   ├── processor.ts   # Metrics calculation
+│   │   ├── generate-risk-scores.ts  # Risk score helper
+│   │   └── generate-insights.ts     # Insights helper
 │   └── utils.ts           # Utility functions
 ├── data/                  # Generated JSON data files
-│   └── tutors.json
+│   ├── tutors.json
+│   ├── sessions.json
+│   └── insights.json
 └── docs/                  # Documentation
     ├── brief.md
     ├── ARCHITECTURE.md
-    └── TASKS.md
+    ├── TASKS.md
+    ├── SLICE-3-COMPLETE.md
+    ├── SLICE-4-COMPLETE.md
+    └── SLICE-5-COMPLETE.md
 ```
 
 ## Data Models
@@ -126,7 +150,7 @@ pnpm start
 }
 ```
 
-### Session (Coming in Slice 2)
+### Session
 
 ```typescript
 {
@@ -144,6 +168,18 @@ pnpm start
 }
 ```
 
+### Recommendation
+
+```typescript
+{
+  id: string
+  priority: "high" | "medium"
+  category: "first_session" | "reliability" | "engagement" | "profile"
+  action: string        # What to do
+  reasoning: string     # Why this recommendation
+}
+```
+
 ## Development Roadmap
 
 The project is built in vertical slices:
@@ -158,20 +194,22 @@ The project is built in vertical slices:
   - Metrics calculation
   - Dashboard with charts
 
-- [ ] **Slice 3**: AI Risk Scoring
+- [x] **Slice 3**: AI Risk Scoring ✅
   - OpenAI integration
   - Risk score generation
   - Visual risk indicators
+  - Sortable table with modal
 
-- [ ] **Slice 4**: Pattern Detection
+- [x] **Slice 4**: Pattern Detection ✅
   - System-wide analysis
   - Recommendations
   - Insights panel
 
-- [ ] **Slice 5**: Detail Views
+- [x] **Slice 5**: Detail Views + Polish ✅
   - Individual tutor pages
-  - Session timelines
+  - Session timelines with charts
   - Filtering & navigation
+  - UI polish & performance optimization
 
 ## Scripts
 
@@ -179,7 +217,39 @@ The project is built in vertical slices:
 - `pnpm build` - Build for production
 - `pnpm start` - Start production server
 - `pnpm lint` - Run ESLint
-- `pnpm generate:data` - Generate mock tutor data
+- `pnpm generate:data` - Generate mock tutor and session data
+- `npx tsx lib/data/update-metrics.ts` - Calculate tutor metrics
+- `npx tsx lib/data/generate-risk-scores.ts` - Generate AI risk scores
+- `npx tsx lib/data/generate-insights.ts` - Generate system insights and recommendations
+
+## Navigation Guide
+
+### Dashboard (`/`)
+- View system-wide metrics and statistics
+- See rating distribution chart
+- Review AI-generated system insights and patterns
+- Quick links to tutor list
+
+### Tutors List (`/tutors`)
+- View all tutors with performance metrics
+- Filter by:
+  - Risk level (Low/Medium/High)
+  - Average rating ranges
+  - First session success rate
+  - Support ticket count
+  - Profile completion
+- Sort by any column (click headers)
+- Click tutor names to view detail pages
+- Click risk badges to see risk analysis
+- Click recommendation counts for detailed actions
+
+### Tutor Detail Pages (`/tutors/[id]`)
+- Comprehensive tutor profile with all metrics
+- AI risk analysis with full reasoning
+- Prioritized recommendations with categories
+- Session timeline with rating trend chart
+- Chronological session history with status badges
+- Breadcrumb navigation back to list
 
 ## Contributing
 
