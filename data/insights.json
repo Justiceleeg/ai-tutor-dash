@@ -1,0 +1,20 @@
+{
+  "generatedAt": "2025-11-10T00:17:58.309Z",
+  "patterns": {
+    "firstSessionFailures": [
+      "High rate of student churn (24%) linked to poor first session experiences.",
+      "All tutors have a first session success rate of less than 50%, indicating systemic issues in session quality.",
+      "At-risk tutors show no improvement in first session success despite having a significant majority (91%)."
+    ],
+    "commonRiskFactors": [
+      "High percentage of at-risk tutors (91%) suggests widespread issues with tutor preparedness or engagement.",
+      "Lack of profile completion (<70%) in 27% of tutors may correlate with poor session quality and reliability.",
+      "Tutor unreliability is evident with 98.2% of reschedules being tutor-initiated, impacting student trust and retention."
+    ]
+  },
+  "systemRecommendations": [
+    "Implement a rigorous onboarding and training program to improve tutor readiness and first session success rates.",
+    "Enforce a minimum profile completion threshold before tutors can begin sessions to ensure professionalism and preparedness.",
+    "Develop a monitoring system for tutor reliability, focusing on reducing reschedules and increasing accountability for no-shows."
+  ]
+}

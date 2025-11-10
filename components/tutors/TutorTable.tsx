@@ -6,7 +6,7 @@
 "use client";
 
 import { useState } from "react";
-import { Tutor, RiskLevel } from "@/lib/types";
+import { Tutor, RiskLevel, Recommendation } from "@/lib/types";
 import {
   Table,
   TableBody,
@@ -22,7 +22,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Star, Users, AlertCircle, CheckCircle2, AlertTriangle, ShieldCheck, ShieldAlert, ArrowUpDown, ArrowUp, ArrowDown } from "lucide-react";
+import { Star, Users, AlertCircle, CheckCircle2, AlertTriangle, ShieldCheck, ShieldAlert, ArrowUpDown, ArrowUp, ArrowDown, Target, Zap } from "lucide-react";
 
 interface TutorTableProps {
   tutors: Tutor[];
@@ -144,6 +144,39 @@ function formatRiskScore(riskScore?: RiskLevel, onClick?: () => void) {
         <span className="text-xs font-medium capitalize">{riskScore}</span>
       </button>
     </div>
+  );
+}
+
+/**
+ * Format recommendations indicator
+ */
+function formatRecommendations(tutor: Tutor, onClick?: () => void) {
+  const recCount = tutor.recommendations?.length || 0;
+  
+  if (tutor.riskScore === "low" || !tutor.riskScore) {
+    return (
+      <div className="text-center text-xs text-muted-foreground">
+        —
+      </div>
+    );
+  }
+  
+  if (recCount === 0) {
+    return (
+      <div className="text-center text-xs text-muted-foreground">
+        Pending
+      </div>
+    );
+  }
+  
+  return (
+    <button
+      onClick={onClick}
+      className="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 hover:opacity-80 transition-opacity cursor-pointer"
+    >
+      <Target className="h-3.5 w-3.5" />
+      <span className="text-xs font-medium">{recCount}</span>
+    </button>
   );
 }
 
@@ -298,6 +331,7 @@ export function TutorTable({ tutors }: TutorTableProps) {
                   <SortIndicator column="profileCompletionRate" />
                 </div>
               </TableHead>
+              <TableHead className="text-center">Recommendations</TableHead>
               <TableHead>Join Date</TableHead>
             </TableRow>
           </TableHeader>
@@ -326,6 +360,9 @@ export function TutorTable({ tutors }: TutorTableProps) {
                 </TableCell>
                 <TableCell className="text-right">
                   {formatProfileCompletion(tutor.profileCompletionRate)}
+                </TableCell>
+                <TableCell className="text-center">
+                  {formatRecommendations(tutor, () => handleRiskClick(tutor))}
                 </TableCell>
                 <TableCell className="text-muted-foreground">{formatDate(tutor.joinDate)}</TableCell>
               </TableRow>
@@ -400,6 +437,61 @@ export function TutorTable({ tutors }: TutorTableProps) {
                 {selectedTutor?.riskReasoning || "No reasoning available."}
               </p>
             </div>
+
+            {/* Recommendations */}
+            {selectedTutor?.recommendations && selectedTutor.recommendations.length > 0 && (
+              <div>
+                <h3 className="font-semibold mb-3 flex items-center gap-2">
+                  <Target className="h-4 w-4 text-blue-500" />
+                  Recommendations ({selectedTutor.recommendations.length})
+                </h3>
+                <div className="space-y-3">
+                  {selectedTutor.recommendations.map((rec) => (
+                    <div
+                      key={rec.id}
+                      className={`p-3 rounded-lg border-l-4 ${
+                        rec.priority === "high"
+                          ? "border-l-red-500 bg-red-50/50 dark:bg-red-950/20"
+                          : "border-l-yellow-500 bg-yellow-50/50 dark:bg-yellow-950/20"
+                      }`}
+                    >
+                      <div className="flex items-start gap-2 mb-1">
+                        <Zap
+                          className={`h-4 w-4 mt-0.5 ${
+                            rec.priority === "high" ? "text-red-500" : "text-yellow-500"
+                          }`}
+                        />
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-1">
+                            <span
+                              className={`text-xs font-semibold uppercase ${
+                                rec.priority === "high" ? "text-red-600 dark:text-red-400" : "text-yellow-600 dark:text-yellow-400"
+                              }`}
+                            >
+                              {rec.priority} Priority
+                            </span>
+                            <span className="text-xs text-muted-foreground">•</span>
+                            <span className="text-xs text-muted-foreground capitalize">
+                              {rec.category.replace("_", " ")}
+                            </span>
+                          </div>
+                          <p className="text-sm font-medium mb-1">{rec.action}</p>
+                          <p className="text-xs text-muted-foreground">{rec.reasoning}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {selectedTutor?.riskScore !== "low" && (!selectedTutor?.recommendations || selectedTutor.recommendations.length === 0) && (
+              <div className="p-3 rounded-lg bg-muted/50 text-center">
+                <p className="text-sm text-muted-foreground">
+                  Recommendations pending. Run pattern analysis to generate.
+                </p>
+              </div>
+            )}
 
             {selectedTutor?.riskScoreGeneratedAt && (
               <p className="text-xs text-muted-foreground">

@@ -9,13 +9,32 @@ import { getSessions } from "@/lib/data/sessions";
 import { calculateSystemMetrics } from "@/lib/data/processor";
 import { MetricCard } from "@/components/dashboard/MetricCard";
 import { RatingDistributionChart } from "@/components/dashboard/RatingDistributionChart";
+import { InsightsPanel } from "@/components/dashboard/InsightsPanel";
 import { Users, Calendar, Star, TrendingUp } from "lucide-react";
+import fs from "fs";
+import path from "path";
+import type { Insights } from "@/lib/types";
 
 export default function DashboardPage() {
   // Load and process data
   const tutors = getTutors();
   const sessions = getSessions();
   const metrics = calculateSystemMetrics(tutors, sessions);
+
+  // Load insights if available
+  let insights: Insights | null = null;
+  try {
+    const insightsPath = path.join(process.cwd(), "data", "insights.json");
+    if (fs.existsSync(insightsPath)) {
+      const data = JSON.parse(fs.readFileSync(insightsPath, "utf-8"));
+      insights = {
+        ...data,
+        generatedAt: new Date(data.generatedAt),
+      };
+    }
+  } catch (error) {
+    console.error("Failed to load insights:", error);
+  }
 
   return (
     <div className="container mx-auto py-10">
@@ -64,6 +83,11 @@ export default function DashboardPage() {
           </p>
           <RatingDistributionChart data={metrics.ratingDistribution} />
         </div>
+      </div>
+
+      {/* System Insights */}
+      <div className="mb-8">
+        <InsightsPanel insights={insights} />
       </div>
 
       {/* Navigation */}

@@ -20,7 +20,7 @@ export interface Tutor {
   riskScore?: RiskLevel;
   riskReasoning?: string;
   riskScoreGeneratedAt?: Date;
-  recommendations?: string[];
+  recommendations?: Recommendation[];
 }
 
 export interface Session {
@@ -44,5 +44,16 @@ export interface Insights {
     commonRiskFactors: string[];
   };
   systemRecommendations: string[];
+}
+
+export type RecommendationPriority = "high" | "medium";
+export type RecommendationCategory = "first_session" | "reliability" | "engagement" | "profile";
+
+export interface Recommendation {
+  id: string;
+  priority: RecommendationPriority;
+  category: RecommendationCategory;
+  action: string;
+  reasoning: string;
 }
 
